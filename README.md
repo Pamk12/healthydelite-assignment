@@ -118,5 +118,3 @@ Pull requests are welcome!
 5. Open a Pull Request
 
 
-Do you want me to make the **README more user-focused (like a product landing page)** or more **developer-focused (with detailed API docs)**?
-```
