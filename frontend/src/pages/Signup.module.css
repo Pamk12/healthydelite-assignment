@@ -1,0 +1,210 @@
+/* Using Google Fonts for a modern, clean look */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
+/* --- Base Layout & Panels --- */
+.pageContainer {
+  display: flex;
+  width: 1440px;
+  height: 900px;
+  font-family: 'Inter', sans-serif;
+  color: #111827; /* Near Black */
+  background-color: #fff;
+}
+
+.formPanel {
+  flex: 0 0 45%; /* Form panel takes up 45% of the screen width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative; /* This is the anchor for the logo */
+}
+
+.imagePanel {
+  flex: 1;
+  /* Change the URL to your local asset path */
+  background-image: url('../assets/signup-image.webp');
+  background-size: cover;
+  background-position: center;
+  margin: 10px 10px;
+  border-radius: 20px;
+}
+
+.formWrapper {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Header & Logo --- */
+.header {
+  position: absolute; /* Positions the logo in the top-left corner */
+  top: 2.5rem;
+  left: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-image: url('../assets/logo.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.logoText {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #374151; /* Gray */
+}
+
+/* --- Typography (Title & Subtitle) --- */
+.title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-top: 5rem; /* Pushes content down from the logo */
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #6B7280; /* Gray */
+  margin-bottom: 2.5rem;
+}
+
+/* --- Form Elements --- */
+.inputGroup {
+  margin-bottom: 1.25rem;
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151; /* Gray */
+  margin-bottom: 0.5rem;
+}
+
+.inputContainer {
+  position: relative;
+}
+
+.input{
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  color: black;
+} 
+.inputWithIcon {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #D1D5DB; /* Gray */
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background-color: #fff;
+  color: black;
+}
+
+.inputWithIcon {
+  padding-left: 2.75rem; /* Make space for the icon */
+}
+
+.input:focus, .inputWithIcon:focus {
+  outline: none;
+  border-color: #4F46E5; /* Indigo */
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+.icon {
+  position: absolute;
+  left: 0.875rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9CA3AF; /* Gray */
+  pointer-events: none;
+}
+
+/* --- Buttons & Links --- */
+.submitButton {
+  width: 100%;
+  padding: 0.875rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #4F46E5; /* Indigo */
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+  background-color: #4338CA; /* Darker Indigo */
+}
+
+.submitButton:disabled {
+  background-color: #A5B4FC; /* Lighter Indigo */
+  cursor: not-allowed;
+}
+
+.googleButton {
+    width: 100%;
+    padding: 0.875rem;
+    margin-top: 1rem;
+    border: 1px solid #D1D5DB; /* Gray */
+    border-radius: 0.5rem;
+    background-color: #fff;
+    color: #374151; /* Gray */
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.googleButton:hover {
+    background-color: #F9FAFB; /* Off-white */
+}
+
+.googleIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.bottomLink {
+  margin-top: auto; /* Pushes the link to the bottom */
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6B7280; /* Gray */
+}
+
+.bottomLink a {
+  color: #4F46E5; /* Indigo */
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.bottomLink a:hover {
+  text-decoration: underline;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 900px) {
+  .imagePanel {
+    display: none; /* Hide image on smaller screens */
+  }
+  .formPanel {
+    flex: 1; /* Form takes full width */
+  }
+}
